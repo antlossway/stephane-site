@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Introduction from "@/components/Introduction";
 import ContactForm from "@/components/ContactForm";
 import {
@@ -67,7 +66,7 @@ export default function Home() {
           </ul>
         </section>
 
-        {/* skill, sticky in the middle left of the screen */}
+        {/* skill, sticky in the middle side of the screen */}
         <section className="mx-auto flex justify-center  flex-wrap gap-4">
           <SkillCard
             title="Tech Skills"
@@ -85,7 +84,7 @@ export default function Home() {
         <section className="flex flex-wrap gap-4 ">
           {/* publication left box */}
           <div
-            className="px-6 py-4 flex-[3]
+            className="px-6 py-4 flex-[3] min-w-[320px]
           border-2 border-slate-200/50 shadow-sm"
           >
             <h2 className="text-xl font-medium mb-6">Publications</h2>
@@ -95,7 +94,10 @@ export default function Home() {
                   key={book.id}
                   className="relative list-none w-[1px] bg-slate-300 after:content-[''] after:absolute after:bottom-0 after:w-[10px] after:h-[10px] after:rounded-full after:bg-slate-400 after:-translate-x-1/2"
                 >
-                  <div className="flex flex-col gap-1 min-w-[350px] md:min-w-[550px] p-4">
+                  <div
+                    className="p-4 flex flex-col gap-1
+                  min-w-[350px] md:min-w-[500px]"
+                  >
                     <span className=" text-base text-slate-600 ">
                       {book.year}
                     </span>
@@ -109,7 +111,7 @@ export default function Home() {
 
           {/* language right box */}
           <div
-            className="px-6 py-4 flex-[2]
+            className="px-6 py-4 flex-[2] min-w-[320px]
           border-2 border-slate-200/50 shadow-sm"
           >
             <h2 className="text-xl font-medium mb-6">Language</h2>

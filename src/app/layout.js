@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         className={
           inter.className +
           " " +
-          " dark:text-white/80 bg-gradient-to-b from-blue-900 to-blue-600"
+          " dark:text-white/80 bg-gradient-to-b from-blue-900 to-blue-300"
         }
       >
         {children}
