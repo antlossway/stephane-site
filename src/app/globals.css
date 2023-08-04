@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-hsl: 0 0% 93%;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  color-scheme: light dark;
+}
+
+/* test */
+@layer components {
+  .wrapper {
+    @apply max-w-screen-lg mx-auto px-4 py-6;
+  }
+  .wrapper-post {
+    @apply max-w-3xl mx-auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  /* background-color: hsl(var(--background-hsl)); */
+}
+
+.autolink-svg {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+input:invalid[focused="true"] ~ span {
+  display: block;
+  color: red;
+}
+
+textarea:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+textarea:invalid[focused="true"] ~ span {
+  display: block;
+  color: red;
+}
