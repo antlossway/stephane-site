@@ -6,7 +6,7 @@ const SkillCard = ({ title, skills, position }) => {
     <div
       className={`px-6 py-4 min-w-[320px] rounded-md
       border-2 border-slate-200/50 shadow-sm
-      text:black/80 flex-1
+       flex-1
       `}
       //    xl:fixed xl:top-[50vh] xl:-translate-y-1/2 xl:${position}  xl:w-[300px]  xl:text-white/80
     >

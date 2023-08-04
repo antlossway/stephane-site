@@ -15,13 +15,13 @@ export default function Home() {
     <div className="min-h-screen w-screen">
       {/* <GradientTopRadient /> */}
 
-      <div className="wrapper mt-4 mb-4 pt-4 px-6 rounded-sm shadow-xl bg-slate-100 [&>*]:mb-6 ">
+      <div className="wrapper mt-4 mb-4 pt-4 px-6 rounded-sm shadow-xl bg-slate-100 dark:bg-slate-900 [&>*]:mb-6 ">
         {/* [&>*]:border [&>*]:border-red-500"> */}
         <Introduction width={80} height={80} />
 
         {/* professional activities */}
         <section
-          className=" mt-8 mb-8 dark:text-white/80
+          className=" mt-8 mb-8
          "
         >
           <h2 className="text-xl font-medium mb-6">Working Experience</h2>
@@ -32,12 +32,14 @@ export default function Home() {
                 className="relative md:translate-x-[200px] list-none w-[1px]  bg-slate-300 after:content-[''] after:absolute after:bottom-0 after:w-[10px] after:h-[10px] after:rounded-full after:bg-slate-400 after:-translate-x-1/2"
               >
                 <div className="flex flex-col gap-2 min-w-[350px] md:min-w-[600px] p-4">
-                  <span className=" md:-translate-x-[200px] text-base text-slate-600 ">
+                  {/* job year */}
+                  <span className=" md:-translate-x-[200px] text-base text-slate-600 dark:text-white/70">
                     {job.year}
                   </span>
 
+                  {/* job title */}
                   <h3 className="text-lg font-semibold">{job.title}</h3>
-
+                  {/* company */}
                   <h4 className="font-medium">
                     {job.url ? (
                       <a href={job.url} target="_blank" className="underline">
@@ -47,9 +49,9 @@ export default function Home() {
                       job.company
                     )}
                   </h4>
-
+                  {/* summary of achievement */}
                   <p className="font-base leading-6">{job.text}</p>
-
+                  {/* list of responsibilities */}
                   <ul>
                     {job.list.map((item, index) => (
                       <li key={index} className="list-disc ml-4 leading-6">
@@ -57,7 +59,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <span className="text-sm text-slate-500 italic">
+                  <span className="text-sm text-slate-500 dark:text-white/60 italic">
                     {job.tech}
                   </span>
                 </div>
@@ -98,7 +100,8 @@ export default function Home() {
                     className="p-4 flex flex-col gap-1
                   min-w-[350px] md:min-w-[500px]"
                   >
-                    <span className=" text-base text-slate-600 ">
+                    {/* year of the book */}
+                    <span className=" text-base text-slate-600 dark:text-white/70">
                       {book.year}
                     </span>
 
@@ -133,8 +136,11 @@ export default function Home() {
             text="@linkedIn"
             url="https://www.linkedin.com/in/stephanet/"
           />
-
-          <span className="text-slate-600">stephane@tougard.com</span>
+          <button className="text-slate-600 dark:text-white/80 underline">
+            stephane@tougard.com
+          </button>
+          {/* popup for contact form */}
+          <dialog>contact form</dialog>
         </section>
       </div>
     </div>

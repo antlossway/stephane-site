@@ -3,7 +3,7 @@ import React from "react";
 export default function LinkToNewTab({
   text,
   url,
-  textStyle = "text-slate-600",
+  textStyle = "text-slate-600 dark:text-white/80",
 }) {
   return (
     <a
