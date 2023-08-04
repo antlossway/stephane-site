@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import ContactForm from "./ContactForm";
 
 const DialogContactForm = () => {
@@ -26,8 +27,13 @@ const DialogContactForm = () => {
       <dialog id="dialog-contactform">
         <div className="relative">
           <ContactForm />
-          <button className="absolute top-2 right-2" onClick={closeModal}>
-            X
+
+          {/* close button */}
+          <button
+            className="absolute top-4 right-4 w-[20px] h-[20px]"
+            onClick={closeModal}
+          >
+            <Image src="/img/close.svg" alt="close" fill />
           </button>
         </div>
       </dialog>
