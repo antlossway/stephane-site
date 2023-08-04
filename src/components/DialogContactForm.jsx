@@ -24,13 +24,13 @@ const DialogContactForm = () => {
         stephane@tougard.com
       </span>
       {/* popup for contact form */}
-      <dialog id="dialog-contactform">
-        <div className="relative">
+      <dialog id="dialog-contactform" className="rounded-md">
+        <div className="relative ">
           <ContactForm />
 
           {/* close button */}
           <button
-            className="absolute top-4 right-4 w-[20px] h-[20px]"
+            className="absolute top-5 right-5 w-[16px] h-[16px]"
             onClick={closeModal}
           >
             <Image src="/img/close.svg" alt="close" fill />
