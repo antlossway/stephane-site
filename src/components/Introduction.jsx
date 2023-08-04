@@ -4,8 +4,10 @@ import React from "react";
 export default function Introduction({ width = 64, height = 64 }) {
   return (
     <div
-      className=" px-6 py-4 bg-transparent rounded-md shadow-[0px_10px_20px_theme('colors.slate.300')]
-        flex flex-col sm:flex-row items-center gap-4 dark:bg-black"
+      className=" px-6 py-4
+        flex flex-col sm:flex-row items-center gap-4
+        border-b-2 border-slate-300/50"
+      // shadow-[0px_10px_20px_theme('colors.slate.300')]
     >
       <Image
         src="/img/avatar1.png"

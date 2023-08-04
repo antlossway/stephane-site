@@ -18,6 +18,9 @@
   .wrapper-post {
     @apply max-w-3xl mx-auto;
   }
+  .list-timeline {
+    @apply relative list-none w-[1px] bg-slate-300/80 after:content-[''] after:absolute after:bottom-0 after:w-[10px] after:h-[10px] after:rounded-full after:bg-slate-400 after:-translate-x-1/2;
+  }
 }
 /*
 @media (prefers-color-scheme: dark) {

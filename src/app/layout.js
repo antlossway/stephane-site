@@ -15,11 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* <body className={inter.className + " " + "bg-white/50 text-black/80 dark:bg-black dark:text-white/80"}> */}
       <body
-        className={
-          inter.className +
-          " " +
-          " dark:text-white/80 bg-gradient-to-b from-blue-900 to-blue-300"
-        }
+        className={inter.className + " " + " dark:text-white/80 dark:bg-black"}
       >
         {children}
         {/* <Navbar /> */}

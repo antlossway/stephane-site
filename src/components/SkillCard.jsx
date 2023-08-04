@@ -5,7 +5,7 @@ const SkillCard = ({ title, skills, position }) => {
     // min-w-[320px]: mobile screen each card will stack on each other
     <div
       className={`px-6 py-4 min-w-[320px] rounded-md
-      border-2 border-slate-200/50 shadow-sm
+      border-1 border-slate-200/80 shadow-sm
        flex-1
       `}
       //    xl:fixed xl:top-[50vh] xl:-translate-y-1/2 xl:${position}  xl:w-[300px]  xl:text-white/80

@@ -90,7 +90,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto px-4 pt-4 border rounded-lg border-gray-300 shadow-md ">
+    <div className="max-w-md mx-auto px-4 pt-4 shadow-lg ">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-stretch gap-4"
@@ -124,7 +124,7 @@ export default function ContactForm() {
 
         {/* If the form was submitted successfully, notify the user */}
         {sent && (
-          <p className="mt-4 mb-2 text-center">
+          <p className="mt-4 mb-2 text-center text-black/80">
             Thank you, I will come back to you soon!
           </p>
         )}

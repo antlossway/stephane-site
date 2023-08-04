@@ -9,13 +9,15 @@ import {
 } from "@/lib/data";
 import LinkToNewTab from "@/components/LinkToNewTab";
 import SkillCard from "@/components/SkillCard";
+import "./globals.css";
+import DialogContactForm from "@/components/DialogContactForm";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-screen">
       {/* <GradientTopRadient /> */}
 
-      <div className="wrapper mt-4 mb-4 pt-4 px-6 rounded-sm shadow-xl bg-slate-100 dark:bg-slate-900 [&>*]:mb-6 ">
+      <div className="wrapper mt-4 mb-4 pt-4 px-6 rounded-sm shadow-xl bg-slate-50 dark:bg-slate-900 [&>*]:mb-6 ">
         {/* [&>*]:border [&>*]:border-red-500"> */}
         <Introduction width={80} height={80} />
 
@@ -29,7 +31,7 @@ export default function Home() {
             {activities.map((job) => (
               <li
                 key={job.id}
-                className="relative md:translate-x-[200px] list-none w-[1px]  bg-slate-300 after:content-[''] after:absolute after:bottom-0 after:w-[10px] after:h-[10px] after:rounded-full after:bg-slate-400 after:-translate-x-1/2"
+                className="list-timeline md:translate-x-[200px] "
               >
                 <div className="flex flex-col gap-2 min-w-[350px] md:min-w-[600px] p-4">
                   {/* job year */}
@@ -83,19 +85,19 @@ export default function Home() {
         </section>
 
         {/* publication and language */}
-        <section className="flex flex-wrap gap-4 ">
+        <section
+          className="flex flex-wrap gap-4
+        [&>*]:border-1  [&>*]:border-slate-200/80 [&>*]:shadow-sm"
+        >
           {/* publication left box */}
           <div
             className="px-6 py-4 flex-[3] min-w-[320px]
-          border-2 border-slate-200/50 shadow-sm"
+          "
           >
             <h2 className="text-xl font-medium mb-6">Publications</h2>
             <ul className="">
               {books.map((book) => (
-                <li
-                  key={book.id}
-                  className="relative list-none w-[1px] bg-slate-300 after:content-[''] after:absolute after:bottom-0 after:w-[10px] after:h-[10px] after:rounded-full after:bg-slate-400 after:-translate-x-1/2"
-                >
+                <li key={book.id} className="list-timeline">
                   <div
                     className="p-4 flex flex-col gap-1
                   min-w-[350px] md:min-w-[500px]"
@@ -115,7 +117,7 @@ export default function Home() {
           {/* language right box */}
           <div
             className="px-6 py-4 flex-[2] min-w-[320px]
-          border-2 border-slate-200/50 shadow-sm"
+          "
           >
             <h2 className="text-xl font-medium mb-6">Language</h2>
             <ul className="flex flex-col gap-4">
@@ -136,11 +138,7 @@ export default function Home() {
             text="@linkedIn"
             url="https://www.linkedin.com/in/stephanet/"
           />
-          <button className="text-slate-600 dark:text-white/80 underline">
-            stephane@tougard.com
-          </button>
-          {/* popup for contact form */}
-          <dialog>contact form</dialog>
+          <DialogContactForm />
         </section>
       </div>
     </div>
