@@ -15,8 +15,10 @@ const SkillCard = ({ title, skills, position }) => {
         {skills.map((item) => (
           <ul key={item.category}>
             <h4 className="font-medium">{item.category}</h4>
-            {item.list.map((skill) => (
-              <li className="text-sm">{skill}</li>
+            {item.list.map((skill, index) => (
+              <li key={index} className="text-sm">
+                {skill}
+              </li>
             ))}
           </ul>
         ))}

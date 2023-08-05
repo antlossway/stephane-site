@@ -30,6 +30,7 @@ export const activities = [
     year: "Jul 2007 - Jul 2011",
     title: "Chief Technology Officer",
     company: "DTONE (formerly Transfer-To)",
+    url: "https://www.dtone.com",
     text: "DTONE stands as the leading B2B Digital Transfer network for mobile top-up and data solutions. Throughout my tenure as Chief Technology Officer, I played a pivotal role in driving technical innovation and overseeing key accomplishments, including:",
     tech: "Linux, FreeBSD, VPN, Apache, Perl, PostgreSQL",
     list: [
@@ -111,6 +112,6 @@ export const languages = [
   },
   {
     lang: "Chinese(Mandarin)",
-    level: "Elementary proficiency",
+    level: "Elementary",
   },
 ];
