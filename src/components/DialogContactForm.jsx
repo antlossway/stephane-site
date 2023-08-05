@@ -21,7 +21,7 @@ const DialogContactForm = () => {
           "
         onClick={openModal}
       >
-        stephane@tougard.com
+        stephane[at]tougard.com
       </span>
       {/* popup for contact form */}
       <dialog id="dialog-contactform" className="rounded-md">
