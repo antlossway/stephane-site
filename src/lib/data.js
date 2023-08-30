@@ -148,11 +148,13 @@ export const books = [
     id: 1,
     title:
       "Les meilleures bibliothèques pour Perl (Best Libraries for Perl) H&K Editions",
+    url: "https://www.h-k.fr/sf.tp.011Biblis",
     year: "2006 - Ongoing",
   },
   {
     id: 2,
     title: "Perl pour l'impatient (Perl for the impatient) H&K Editions",
+    url: "https://www.h-k.fr/sf.tp.003PPI-ed2",
     year: "2005 - Ongoing",
   },
 ];

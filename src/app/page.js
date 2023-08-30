@@ -11,6 +11,7 @@ import LinkToNewTab from "@/components/LinkToNewTab";
 import SkillCard from "@/components/SkillCard";
 import "./globals.css";
 import DialogContactForm from "@/components/DialogContactForm";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -125,8 +126,9 @@ export default function Home() {
                     <span className=" text-base text-slate-600 dark:text-white/70">
                       {book.year}
                     </span>
-
-                    <h3 className="text-md font-medium">{book.title}</h3>
+                    <Link href={book.url} target="_blank">
+                      <h3 className="text-md font-medium">{book.title}</h3>
+                    </Link>
                   </div>
                 </li>
               ))}
