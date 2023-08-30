@@ -1,7 +1,16 @@
 export const activities = [
   {
+    id: 0,
+    year: "Jun 2023 - Ongoing",
+    title: "I.T. Consultant",
+    company: "Iglu",
+    url: "https://iglu.net",
+    text: "Iglu is the global hub for tech talent, providing software consulting and business outsourcing services to companies of the Iglu network and local clients.",
+  },
+
+  {
     id: 1,
-    year: "Mar 2022 - Ongoing",
+    year: "Mar 2022 - Jun 2023",
     title: "I.T. Consultant",
     company: "AMEEX Mobile Exchange S.A.",
     url: "https://ameex-mobile.com",

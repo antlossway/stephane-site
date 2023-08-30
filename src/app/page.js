@@ -56,15 +56,19 @@ export default function Home() {
                       )}
                     </h4>
                     {/* summary of achievement */}
-                    <p className="font-base leading-6">{job.text}</p>
+                    {job.text && (
+                      <p className="font-base leading-6">{job.text}</p>
+                    )}
                     {/* list of responsibilities */}
-                    <ul className="mt-2">
-                      {job.list.map((item, index) => (
-                        <li key={index} className="list-disc ml-4 leading-6">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    {job.list && (
+                      <ul className="mt-2">
+                        {job.list.map((item, index) => (
+                          <li key={index} className="list-disc ml-4 leading-6">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     {/* tech used */}
                     {job.tech && (
                       <ul className="mt-4 flex flex-wrap gap-2">
