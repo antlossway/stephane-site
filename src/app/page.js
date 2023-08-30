@@ -1,11 +1,11 @@
 import Introduction from "@/components/Introduction";
-import ContactForm from "@/components/ContactForm";
 import {
   activities,
   techSkills,
   leadSkills,
   books,
   languages,
+  courses,
 } from "@/lib/data";
 import LinkToNewTab from "@/components/LinkToNewTab";
 import SkillCard from "@/components/SkillCard";
@@ -33,44 +33,59 @@ export default function Home() {
                 key={job.id}
                 className="list-timeline md:translate-x-[200px] "
               >
-                <div className="flex flex-col gap-2 min-w-[350px] md:min-w-[600px] p-4">
+                <div
+                  className="flex flex-col gap-2 min-w-[350px] md:min-w-[600px] p-4
+                 "
+                >
                   {/* job year */}
                   <span className=" md:-translate-x-[200px] text-base text-slate-600 dark:text-white/70">
                     {job.year}
                   </span>
-
-                  {/* job title */}
-                  <h3 className="text-lg font-semibold">{job.title}</h3>
-                  {/* company */}
-                  <h4 className="font-medium">
-                    {job.url ? (
-                      <a href={job.url} target="_blank" className="underline">
-                        {job.company}
-                      </a>
-                    ) : (
-                      job.company
+                  {/* right side of timeline on bigger screen */}
+                  <div className="md:-translate-y-[2rem]">
+                    {/* job title */}
+                    <h3 className="text-lg font-semibold">{job.title}</h3>
+                    {/* company */}
+                    <h4 className="font-medium">
+                      {job.url ? (
+                        <a href={job.url} target="_blank" className="underline">
+                          {job.company}
+                        </a>
+                      ) : (
+                        job.company
+                      )}
+                    </h4>
+                    {/* summary of achievement */}
+                    <p className="font-base leading-6">{job.text}</p>
+                    {/* list of responsibilities */}
+                    <ul className="mt-2">
+                      {job.list.map((item, index) => (
+                        <li key={index} className="list-disc ml-4 leading-6">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {/* tech used */}
+                    {job.tech && (
+                      <ul className="mt-4 flex flex-wrap gap-2">
+                        {job.tech.map((item, index) => (
+                          <li
+                            key={index}
+                            className="bg-gray-300 px-2 py-1 rounded-md text-sm
+                            dark:bg-gray-700 "
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     )}
-                  </h4>
-                  {/* summary of achievement */}
-                  <p className="font-base leading-6">{job.text}</p>
-                  {/* list of responsibilities */}
-                  <ul>
-                    {job.list.map((item, index) => (
-                      <li key={index} className="list-disc ml-4 leading-6">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <span className="text-sm text-slate-500 dark:text-white/60 italic">
-                    {job.tech}
-                  </span>
+                  </div>
                 </div>
               </li>
             ))}
           </ul>
         </section>
 
-        {/* skill, sticky in the middle side of the screen */}
         <section className="mx-auto flex justify-center  flex-wrap gap-4">
           <SkillCard
             title="Tech Skills"
@@ -122,9 +137,40 @@ export default function Home() {
             <h2 className="text-xl font-medium mb-6">Language</h2>
             <ul className="flex flex-col gap-4">
               {languages.map((item) => (
-                <li key={item.lang} className="flex justify-between">
+                <li
+                  key={item.lang}
+                  className="px-4 py-2 flex justify-between odd:bg-gray-200 odd:dark:bg-gray-700 rounded-sm"
+                >
                   <span>{item.lang}</span>
                   <span>{item.level}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* courses and certifications */}
+        <section>
+          <div
+            className="px-6 py-4 min-w-[320px]
+          "
+          >
+            <h2 className="text-xl font-medium mb-6">
+              Courses and Certifications
+            </h2>
+            <ul className="flex flex-col gap-4">
+              {courses.map((item) => (
+                <li
+                  key={item.name}
+                  className="px-4 py-2 flex justify-between odd:bg-gray-200 odd:dark:bg-gray-700 rounded-sm"
+                >
+                  <div className="flex flex-col">
+                    <span>{item.name}</span>
+                    <span className="text-sm font-extralight italic ">
+                      {item.provider}
+                    </span>
+                  </div>
+                  <span>{item.year}</span>
                 </li>
               ))}
             </ul>
